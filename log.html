@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.1.0/angular-ui-router.min.js"></script>
+    <srcipt src="scr.js"></srcipt>
+     
+    
+   <style>
+    body{
+        background-color: #f4f9ff;    
+    }
+    #div1{
+        height:550px;
+        width:1050px ;
+        background-color: #ffffff;
+        margin-top:60px;
+        margin-left:100px ;
+        display: flex;
+    }
+    #div2{height: 550px;
+        width: 480px;
+        background-color: #74b4ff ;
+        display: flex;
+    }
+    #div3{
+        height:320px ;
+        width: 340px ;
+        background-color: #a4c5fb;
+        margin-top: 100px;
+        margin-left: 70px;
+    }
+    #text{
+        color: #ffffff;
+        font-size: 40px;
+        margin-left: 20px;
+        margin-top: 35px;   
+    }
+    #text2{
+        color:#1a1d50;
+        font-size: 40px;
+        margin-left: 20px;
+        margin-top: -30px;
+    }
+    #text3{
+        color: #ffffff;
+        margin-left:20px;
+        margin-top: -20px;
+    }
+    #hey{
+        margin-top:20px ;
+        margin-left:30px ;
+    }
+    #spiral{
+        height: 100px;
+        width: 100px;
+        margin-left: 20px;
+    }
+    #hand{
+        width:90px ;
+        height:90px ;
+        margin-left:180px ;
+        margin-top: -100px;
+    }
+    #h6{
+        margin-left: 30px;
+        margin-top: px;
+    }
+    #email{
+        margin-left: 30px;
+        width: 400px;
+        border-radius: 5px;
+        height: 30px;
+        margin-top: -10px;
+    }
+    #kes{
+        margin-left: 30px;
+    }
+    #password{
+        margin-left: 30px;
+    }
+    #pword{
+        margin-left: 30px;
+        width: 400px;
+        border-radius: 5px;
+        height: 30px;
+        margin-top: -10px;
+    }
+    #checkbox{
+        margin-left: 30px;
+    }
+    #forgot{
+        margin-left: 325px;
+        margin-top: -20px;
+    }
+    #login{
+        height:30px ;
+        width: 410px;
+        margin-left: 30px;
+        background-color: #5ca6fb;
+        border: 1.5px solid black;
+        border-radius: 5px;
+    }    
+    #back{
+      margin-left:30px ;
+    }
+   
+  </style>
+  <body>
+    
+    
+    <div id="div1" ng-submit="login()">
+    <div id="div2">
+    <div id="div3">
+    <h1 id="text"> <image src="icons8-play-30.png"></image> Digital<br>platform <br>for distance</h1><br>
+    <h1 id="text2">learning.</h1><br>
+    <h5 id="text3">You will never know everything.<br>But you will know more.</h5>
+    </div>
+    </div>
+    <div id="div4">
+    <image id="spiral" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF9kIRN-alnQTiZfdv_6tLgYPRSZaHq3_U4Q&usqp=CAU"></image>
+    <h1 id="hey">Hey,hello</h1>
+    <h5 id="h6">Enter the information you entered while registering</h5><br>
+    <h4 id="kes"><b>Email:</b></h4><br>
+    <input id="email" type="email"
+    class="form-control"
+    id="email"
+    ng-model="user.email"
+    required><br>
+    <h4 id="password"><b>Password:</b></h4><br>
+    <input id="pword"  type="password"
+    class="form-control"
+    id="username"
+    ng-model="user.password"
+    required><br><br><br>
+    
+    <input type="button" id="login" value="Login"
+    type="submit"
+    class="btn btn-primary"
+    ng-click="login()"
+    >
+    <br>
+    <h5 id="back">Back to registration :<a ui-sref="registration">Register</a>
+    </div>
+    </div> 
+    
+  </body>
+  </head>
+  </html>
+
+
+
+
+
+
+  

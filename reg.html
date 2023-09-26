@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.1.0/angular-ui-router.min.js"></script>
+
+  <style>
+    body {
+      background-color: #ffeafd;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      margin-top: 80px;
+      padding: 20px;
+      background-color: #c4aea9;
+      border-radius: 15px;
+      background: transparent;
+      border: 3px solid white;
+      border-radius: 5px;
+      backdrop-filter: blur(20px);
+      margin-left: 0px;
+      height: 500px;
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #register {
+      width: 100%;
+      padding: 10px;
+      background-color: white;
+      color: #212d2d;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    #username {
+      background: transparent;
+      border: 2px solid white;
+    }
+
+    #email {
+      background: transparent;
+      border: 2px solid white;
+    }
+
+    #password {
+      background: transparent;
+      border: 2px solid white;
+    }
+
+    #confirm-password {
+      background: transparent;
+      border: 2px solid white;
+    }
+
+    #main {
+      display: flex;
+    }
+
+    #image {
+      height: 500px;
+      width: 500px;
+      margin-left: 150px;
+      margin-top: 80px;
+      border: 3px white;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="main" > 
+    <img id="image" src="https://t1.gstatic.com/images?q=tbn:ANd9GcT5aPvNhJCjzi3-vlCqQoeCZtqfepFB6RNSzXuASYtSgDKS4sBS">
+    <div class="container">
+      <h2>Register</h2>
+      <form name="registerForm"  ng-submit="register()" novalidate>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" class="form-control" id="username" ng-model="user.username" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" ng-model="user.email"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" ng-model="user.password" required />
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" class="form-control" id="confirm-password" ng-model="confirmPassword" required />
+        </div>
+
+        <br />
+        <button id="register" type="submit" class="btn btn-primary">Register</button>
+      </form><br>
+      Already registered, click here <a ui-sref="login">Login</a>
+    </div>
+  </div>
+  
+
+  <script src="src.js"> </script>
+</body>
+
+</html>
